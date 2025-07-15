@@ -1,12 +1,14 @@
 import {Component} from '@angular/core';
 import {ClassDirective} from './class.directive';
 import {SetClassDirective} from './set-class.directive';
+import {TimesDirective} from './times.directive';
 
 @Component({
   selector: 'app-root',
   imports: [
     ClassDirective,
-    SetClassDirective
+    SetClassDirective,
+    TimesDirective
   ],
   templateUrl: './app.html',
   styleUrl: './app.css'

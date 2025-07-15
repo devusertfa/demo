@@ -17,6 +17,11 @@
     </li>
   </ul>
 </nav>
+<ul *appTimes="3">
+  <li>I1</li>
+  <li>I2</li>
+  <li>I3</li>
+</ul>
 <div>
   <h2 [appClass]="'yellow'">{{ images[currentPage].title }}</h2>
   <img [src]="images[currentPage].url" alt="" style="max-width: 300px;max-height: 300px;">
