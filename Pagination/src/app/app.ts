@@ -1,12 +1,12 @@
 import {Component} from '@angular/core';
-import {NgClass} from '@angular/common';
 import {ClassDirective} from './class.directive';
+import {SetClassDirective} from './set-class.directive';
 
 @Component({
   selector: 'app-root',
   imports: [
-    NgClass,
-    ClassDirective
+    ClassDirective,
+    SetClassDirective
   ],
   templateUrl: './app.html',
   styleUrl: './app.css'

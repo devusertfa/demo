@@ -1,23 +1,23 @@
 <nav aria-label="...">
   <ul class="pagination">
-    <li class="page-item " [ngClass]="{disabled : currentPage ===0}">
+    <li class="page-item" [appSetClass]="{disabled : currentPage ===0}">
       <a (click)="changePage()" class="page-link" href="#">Previous</a>
     </li>
     @for (image of images; track $index; let i = $index) {
       @if (checkWindowIndex(i)) {
         <ng-container>
-          <li class="page-item" [ngClass]="setActiveClass(i)">
+          <li class="page-item" [appSetClass]="{active : i == currentPage}">
             <a (click)="currentPage=i" class="page-link" href="#">{{ i + 1 }}</a>
           </li>
         </ng-container>
       }
     }
-    <li class="page-item" [ngClass]="{disabled : currentPage===images.length-1}">
+    <li class="page-item" [appSetClass]="{disabled : currentPage===images.length-1}">
       <a (click)="currentPage=currentPage+1" class="page-link" href="#">Next</a>
     </li>
   </ul>
 </nav>
 <div>
-  <h2 appClass [color]="'yellow'">{{ images[currentPage].title }}</h2>
+  <h2 [appClass]="'yellow'">{{ images[currentPage].title }}</h2>
   <img [src]="images[currentPage].url" alt="" style="max-width: 300px;max-height: 300px;">
 </div>
