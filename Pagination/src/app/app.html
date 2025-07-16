@@ -17,10 +17,10 @@
     </li>
   </ul>
 </nav>
-<ul *appTimes="3">
-  <li>I1</li>
-  <li>I2</li>
-  <li>I3</li>
+<ul *appTimes="images.length;let i = index">
+  <li>I{{ i }}</li>
+  <li>I{{ i }}</li>
+  <li>I{{ i }}</li>
 </ul>
 <div>
   <h2 [appClass]="'yellow'">{{ images[currentPage].title }}</h2>
